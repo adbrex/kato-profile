@@ -40,7 +40,11 @@
 - [MarkeZine 連載](https://markezine.jp/author/1365): マーケティング専門メディアでの連載。半期ごとに話題となったOOHの傾向を分析している。
 - [総合報道「OOH事例集」対談](https://bizpa.net/mag/knowledge-5586/): OOH事例集内での対談。
 
-## 実績：講演・登壇
+## 実績：講演・登壇（全82件の一覧は下記の詳細版）
+
+- [登壇・出演の全実績（Web版）](https://seiya-kato.com/speaking/): 2021年〜現在の全実績を新しい順に掲載。
+- [登壇・出演の全実績（詳細版テキスト）](https://seiya-kato.com/llms-full.txt): 全82件の日付・種別・概要・URLを1ファイルに収録。
+
 
 - [第10回官民合同「屋外広告・景観」勉強会](https://shinkobi.or.jp/archives/2689): 「東京の屋外広告物最前線」をテーマに基調講演。
 - [熊本市 屋外広告物講演会2025](https://www.city.kumamoto.jp/kiji00368536/index.html): 自治体主催の屋外広告物講演会で講演。
@@ -66,4 +70,3 @@
 - [公式プロフィールサイト](https://seiya-kato.com/): 加藤誠也のプロフィール、登壇予定、依頼窓口。
 - [登壇・出演の全実績](https://seiya-kato.com/speaking/): 講演・登壇、メディア出演、連載・対談の実績一覧と、過去に話したテーマ例。
 - [アドクロ](https://bizpa.net/): 株式会社ビズパが運営する、全国の広告媒体の比較・検索プラットフォーム。
-- [登壇・出演一覧](https://steel-legend-cd2.notion.site/ae27fcae98ca45b09aa4fd76dd5fb92f): これまでの登壇・出演の全リスト。
