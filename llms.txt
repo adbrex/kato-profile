@@ -64,5 +64,6 @@
 ## Optional
 
 - [公式プロフィールサイト](https://seiya-kato.com/): 加藤誠也のプロフィール、登壇予定、依頼窓口。
+- [登壇・出演の全実績](https://seiya-kato.com/speaking/): 講演・登壇、メディア出演、連載・対談の実績一覧と、過去に話したテーマ例。
 - [アドクロ](https://bizpa.net/): 株式会社ビズパが運営する、全国の広告媒体の比較・検索プラットフォーム。
 - [登壇・出演一覧](https://steel-legend-cd2.notion.site/ae27fcae98ca45b09aa4fd76dd5fb92f): これまでの登壇・出演の全リスト。
