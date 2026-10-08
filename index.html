@@ -267,14 +267,12 @@
   /* profile grid (pilgrimage box + bio) */
   .profile-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;margin-top:28px}
   .pilgrim-box{padding:0}
-  .pilgrim-tag{font-size:15px;font-weight:800;color:var(--ink);list-style:none;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:space-between;gap:8px}
-  .pilgrim-tag::-webkit-details-marker{display:none}
-  .pilgrim-arrow{display:none;font-size:13px;transition:transform .25s}
-  .pilgrim-box[open] .pilgrim-tag{margin-bottom:12px}
+  .pilgrim-tag{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:12px}
   .ext-links{list-style:none}
   .ext-links li{position:relative;padding-left:20px;font-size:17px;line-height:1.95;color:var(--ink-soft)}
   .ext-links li::before{content:"";position:absolute;left:2px;top:.95em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
   .ext-links a{color:var(--accent);font-weight:700;text-decoration:underline}
+  .ext-note{color:var(--accent);font-weight:700}
   .ext-links a:hover{color:var(--accent-dark)}
   .bio-h{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:12px}
   .bio p{font-size:17px;color:var(--ink-soft);margin-bottom:16px;line-height:1.95}
@@ -411,11 +409,8 @@
     .bio p{font-size:15px;line-height:1.8;margin-bottom:12px}
     .bio-cta-row{flex-wrap:nowrap;gap:10px}
     .bio-cta{min-width:0;flex:1;padding:12px 14px;font-size:13.5px;gap:6px}
-    .pilgrim-tag{pointer-events:auto;cursor:pointer}
-    .pilgrim-arrow{display:inline-block}
-    .ext-links li{font-size:15px;line-height:1.8}
-    .pilgrim-box[open] .pilgrim-arrow{transform:rotate(180deg)}
-    section{padding:46px 0}
+      .ext-links li{font-size:15px;line-height:1.8}
+      section{padding:46px 0}
     .presentation,.newsletter{padding:40px 0}
     .faq{padding:40px 0 56px}
     .faq-item summary{padding:16px 18px;font-size:15px}
@@ -461,17 +456,17 @@
         <p>2020年から、広告を見て回る「広告巡礼」を継続。数多くの広告事例を自分の目で見てきた経験を独自の強みに持つ。</p>
       </div>
       <div class="side reveal">
-        <details class="pilgrim-box">
-          <summary class="pilgrim-tag">外部サイト上でのプロフィール<span class="pilgrim-arrow">▾</span></summary>
+        <div class="pilgrim-box">
+          <h2 class="pilgrim-tag">外部サイト上でのプロフィール</h2>
           <div class="pilgrim-body">
             <ul class="ext-links">
               <li><a href="https://x.com/adbrex_" target="_blank" rel="me noopener">X：@adbrex_</a></li>
-              <li><a href="https://adbrex.theletter.jp/" target="_blank" rel="me noopener">加藤誠也のニュースレター</a></li>
+              <li><a href="https://adbrex.theletter.jp/" target="_blank" rel="me noopener">加藤誠也のニュースレター</a><span class="ext-note">（注力中！）</span></li>
               <li><a href="https://markezine.jp/author/1365" target="_blank" rel="me noopener">MarkeZine：加藤誠也</a></li>
               <li><a href="https://note.com/adbrex_" target="_blank" rel="me noopener">note：加藤誠也</a></li>
             </ul>
           </div>
-        </details>
+        </div>
           <div class="bio-cta-row">
             <a class="bio-cta" href="#" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">💬 ちょっと相談する</a>
             <a class="bio-cta ghost" href="https://timerex.net/s/kato.seiya_a288/f6985603/" target="_blank" rel="noopener">🍔 ランチで話す</a>
@@ -780,10 +775,6 @@
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.14});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
-  // Desktop: keep the pilgrim-box accordion always expanded
-  var pilgrimBox = document.querySelector('.pilgrim-box');
-  if(pilgrimBox && window.matchMedia('(min-width:721px)').matches){ pilgrimBox.open = true; } else if(pilgrimBox){ pilgrimBox.open = false; }
 
   // GA4: capture every link click (internal & outbound)
   document.addEventListener('click', function(e){
