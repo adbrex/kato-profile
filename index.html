@@ -40,7 +40,7 @@
       "name": "加藤誠也｜屋外広告ウォッチャー",
       "inLanguage": "ja",
       "isPartOf": { "@id": "https://seiya-kato.com/#website" },
-      "dateModified": "2026-10-27T18:50:00+09:00",
+      "dateModified": "2026-11-11T17:20:00+09:00",
       "mainEntity": { "@id": "https://seiya-kato.com/#kato" }
     },
     {
@@ -78,6 +78,16 @@
             "@type": "Service",
             "name": "OOH（屋外広告・交通広告）の企画・媒体選定支援",
             "description": "OOHを起点とした企画立案から、媒体選定・買付・出稿まで対応。広告代理店として一貫支援、月額のアドバイザー、単発のスポットコンサルの3形態。",
+            "provider": { "@id": "https://seiya-kato.com/#kato" },
+            "areaServed": "JP"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "OOH活用研修（1on1研修・社内研修）",
+            "description": "OOH（屋外広告・交通広告）の最新トレンド、媒体選びのコツ、企画の考え方を共有し、社内のOOHリテラシーを底上げする研修。担当者向けの1on1研修、部署・チーム向けの社内研修（スタンダード／オーダーメイド）、広告巡礼オプション。",
             "provider": { "@id": "https://seiya-kato.com/#kato" },
             "areaServed": "JP"
           }
@@ -267,7 +277,6 @@
   .hero-img img{width:100%;height:auto;border-radius:var(--r);display:block}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-
   /* profile grid (pilgrimage box + bio) */
   .profile-grid{display:block;margin-top:26px}
   .pilgrim-box{padding:0}
@@ -358,7 +367,7 @@
   .m-row.static:hover{background:#fff}
 
   /* contact (LP-style band, no box) */
-  .contact{background:var(--bg);text-align:center;padding:48px 0 92px;border-top:1px solid var(--line)}
+  .contact{background:var(--bg-soft);text-align:center;padding:48px 0 92px;border-top:1px solid var(--line)}
   .contact p{font-size:18px;max-width:34em;margin:0 auto 36px;color:var(--ink-soft)}
   .contact p.hw{font-family:"Zen Kurenaido","Noto Sans JP",sans-serif;font-size:20px;line-height:1.85;color:var(--ink);letter-spacing:.02em}
   .contact-form{max-width:640px;margin:0 auto}
@@ -381,7 +390,57 @@
   .cc-body li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
 
   /* faq */
-  .faq{background:var(--bg-soft);border-top:1px solid var(--line);padding:64px 0 92px}
+  .faq{background:var(--bg);border-top:1px solid var(--line);padding:64px 0 92px}
+  /* training */
+  .training{background:var(--bg);border-top:1px solid var(--line);padding:72px 0 64px}
+  .tr-hero{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+  .tr-badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--accent-dark)}
+  .tr-badge span{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.08em;color:#fff;background:#143C28;border-radius:999px;padding:3px 10px}
+  .tr-title{font-size:clamp(28px,4.4vw,42px);font-weight:900;line-height:1.25;margin-top:12px;color:var(--ink)}
+  .tr-hero .tr-catch{margin-top:12px;font-size:clamp(17px,1.9vw,22px);white-space:nowrap}
+  .tr-sub{display:inline-block;margin-top:10px;font-size:14px;font-weight:800;color:var(--ink);background:linear-gradient(transparent 60%,rgba(52,178,106,.24) 60%);padding:0 2px}
+  .tr-hero .tr-desc{margin:12px 0 22px}
+  .tr-hero .bio-cta{display:inline-flex}
+  .tr-hero-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3}
+  .tr-hero-img img{width:100%;height:100%;object-fit:cover}
+  .tr-catch{font-size:clamp(19px,2.6vw,24px);font-weight:900;color:var(--accent-dark);line-height:1.6}
+  .tr-desc{font-size:15.5px;color:var(--ink-soft);line-height:1.9;margin-top:10px}
+  .tr-label{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--ink);margin:44px 0 16px}
+  .tr-label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .tr-fit{display:grid;grid-template-columns:1fr 1fr;gap:18px 48px}
+  .tr-fit-card{padding:0}
+  .tr-fit-h{font-size:16px;font-weight:800;color:var(--accent-dark);margin-bottom:12px}
+  .tr-check{list-style:none}
+  .tr-check li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.7;color:var(--ink);padding:5px 0}
+  .tr-ck{width:18px;height:18px;flex:none;margin-top:3px;color:#fff;background:var(--accent);border-radius:5px;padding:2px}
+  .tr-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .tr-plan{border:1px solid var(--line-2);border-radius:var(--r);padding:22px 22px 20px;background:#fff}
+  .tr-plan-tag{display:inline-block;font-size:11.5px;font-weight:800;color:var(--accent-dark);background:var(--accent-soft);border-radius:999px;padding:3px 10px}
+  .tr-plan h3{font-size:19px;font-weight:900;margin-top:10px;line-height:1.4}
+  .tr-meta{display:flex;gap:8px;margin:8px 0 10px}
+  .tr-meta span{font-size:12.5px;font-weight:700;color:var(--ink-soft);border:1px solid var(--line-2);border-radius:6px;padding:1px 8px}
+  .tr-plan > p:last-child{font-size:14px;color:var(--ink-soft);line-height:1.75}
+  .tr-option{display:flex;align-items:center;gap:14px;margin-top:14px;border:1px dashed var(--accent);border-radius:12px;padding:12px 18px;background:#fff}
+  .tr-option-tag{flex:none;font-size:11.5px;font-weight:800;color:#fff;background:var(--accent);border-radius:999px;padding:3px 10px}
+  .tr-option p{font-size:14px;color:var(--ink-soft);line-height:1.7}
+  .tr-option b{color:var(--ink)}
+  .tr-themes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .tr-theme{background:var(--bg-soft);border-radius:var(--r);padding:22px}
+  .tr-num{font-family:"Inter",sans-serif;font-size:26px;font-weight:800;color:var(--accent);line-height:1}
+  .tr-theme h3{font-size:16.5px;font-weight:800;margin:10px 0 6px;line-height:1.5}
+  .tr-theme p{font-size:14px;color:var(--ink-soft);line-height:1.75}
+  .tr-flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+  .tr-flow li{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;padding:0 10px}
+  .tr-flow li:not(:last-child)::before{content:"";position:absolute;left:calc(50% + 26px);right:calc(-50% + 26px);top:16px;height:2px;background:repeating-linear-gradient(90deg,var(--accent) 0 6px,transparent 6px 11px)}
+  .tr-step{position:relative;z-index:1;font-family:"Inter",sans-serif;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px #fff}
+  .tr-flow b{font-size:15.5px;margin-top:12px}
+  .tr-flow small{font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+  .tr-cta{margin:56px calc(50% - 50vw) -64px;padding:40px 24px 44px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;background:#143C28}
+  .tr-cta p{font-size:15.5px;color:#fff;line-height:1.7;font-weight:700}
+  .tr-cta .bio-cta{background:#fff;color:#143C28;box-shadow:none}
+  .tr-cta .bio-cta:hover{background:#E8F6EE;color:#143C28}
+  .tr-cta .bio-cta{flex:none}
+  .sp-br{display:none}
   /* footer */
   .site-foot{background:#143C28;color:#fff}
   .foot-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
@@ -393,15 +452,17 @@
   .head-links a{color:#fff;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.55);white-space:nowrap;transition:color .2s,text-decoration-color .2s}
   .head-links a:hover{color:#BFE8CF;text-decoration-color:#BFE8CF}
   /* ask AI */
-  .ask-ai{margin-top:28px;padding-top:24px;border-top:1px dashed var(--line-2);display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 28px}
-  .ask-ai-h{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:800;color:var(--ink);line-height:1.6}
-  .ask-ai-spark{width:24px;height:24px;flex:none}
+  .ask-ai{margin-top:14px}
+  .ask-ai-h{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:800;color:var(--ink);line-height:1.6}
+  .ask-ai-spark{width:17px;height:17px;flex:none}
   .ask-ai-lead{font-size:14px;color:var(--ink-soft);margin-top:2px;line-height:1.8;padding-left:32px}
-  .ask-ai-btns{display:flex;flex-wrap:wrap;gap:10px}
-  .ask-ai-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 18px;border-radius:999px;border:1.5px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#34B26A,#2BA8C8 55%,#7B61FF) border-box;color:var(--ink);font-size:14px;font-weight:700;line-height:1.4;transition:background .2s,transform .2s,box-shadow .2s}
+  .ask-ai-btns{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+  .ask-ai-btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:5px 13px;border-radius:999px;border:1.5px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#34B26A,#2BA8C8 55%,#7B61FF) border-box;color:var(--ink);font-size:12.5px;font-weight:700;line-height:1.4;transition:background .2s,transform .2s,box-shadow .2s}
   .ask-ai-btn:hover{background:linear-gradient(135deg,#EBF7F0,#E7F4F9 55%,#F0EDFF) padding-box,linear-gradient(135deg,#34B26A,#2BA8C8 55%,#7B61FF) border-box;transform:translateY(-2px);box-shadow:0 10px 20px -14px rgba(60,80,140,.6)}
   .ask-ai-ext{width:11px;height:11px;flex:none;color:var(--muted)}
-  .ask-ai-note{grid-column:1/-1;font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.7}
+  .bio .ask-ai p.ask-ai-h{font-size:13.5px;color:var(--ink);margin:0;line-height:1.6;font-weight:500}
+  .bio .ask-ai p.ask-ai-note{font-size:11.5px;color:var(--muted);margin:6px 0 0;line-height:1.6}
+  .ask-ai-note{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.7}
   /* lunch */
   .lunch{background:var(--bg);border-top:1px solid var(--line);padding:64px 0}
   .lunch-card{border:1px solid var(--line-2);border-radius:var(--r);overflow:hidden;background:#fff;padding:12px}
@@ -430,9 +491,13 @@
 
   /* ---------- Responsive ---------- */
   @media(max-width:920px){
+    .tr-hero{grid-template-columns:1fr}
+    .tr-hero-img{max-width:520px}
+    .tr-menu,.tr-themes{grid-template-columns:1fr}
+    .tr-flow{grid-template-columns:1fr 1fr;row-gap:24px}
+    .tr-flow li:nth-child(2)::before{display:none}
     .bio{grid-template-columns:1fr}
     .bio-cta-row{flex-direction:row;flex-wrap:wrap}
-    .ask-ai{grid-template-columns:1fr;gap:12px}
     .ask-ai-note{margin-top:0}
     .profile-grid{grid-template-columns:1fr;gap:26px}
     .feat-grid{grid-template-columns:1fr 1fr}
@@ -442,6 +507,22 @@
     .upcoming-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:720px){
+    .training{padding:44px 0 40px}
+    .tr-hero{grid-template-columns:1fr;gap:20px}
+    .tr-hero .tr-catch{white-space:normal}
+    .tr-hero-img{order:-1}
+    .tr-hero .bio-cta{display:flex}
+    .tr-fit{grid-template-columns:1fr}
+    .tr-label{margin:32px 0 12px}
+    .tr-flow{grid-template-columns:1fr;row-gap:0}
+    .tr-flow li{padding:0 0 18px 50px;min-height:58px;align-items:flex-start;text-align:left}
+    .tr-flow .tr-step{position:absolute;left:0;top:0}
+    .tr-flow b{margin-top:5px}
+    .tr-flow li:not(:last-child)::before{display:block;left:16px;right:auto;top:34px;bottom:0;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--accent) 0 6px,transparent 6px 11px)}
+    .tr-option{flex-direction:column;align-items:flex-start;gap:8px}
+    .tr-cta{align-items:stretch;margin:40px calc(50% - 50vw) -40px;padding:28px 20px 32px}
+    .sp-br{display:inline}
+    .ask-ai{margin-left:0}
     .bio-text{padding-left:16px}
     .bio p.bio-lead{font-size:16px}
     .site-foot{padding:16px 0 18px}
@@ -460,10 +541,9 @@
     .presentation,.newsletter{padding:40px 0}
     .faq{padding:40px 0 56px}
     .lunch{padding:40px 0}
-    .ask-ai{grid-template-columns:1fr;margin-top:22px;padding-top:20px;gap:12px}
     .ask-ai-lead{padding-left:0}
-    .ask-ai-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .ask-ai-btn{padding:10px 6px;font-size:13px}
+    .ask-ai-btns{display:grid;grid-template-columns:repeat(3,1fr)}
+    .ask-ai-btn{padding:8px 4px;font-size:12.5px}
     .ask-ai-note{margin-top:0}
     .lunch-card{padding:6px}
     .faq-item summary{padding:16px 18px;font-size:15px}
@@ -504,12 +584,24 @@
 
     <div class="profile-grid">
       <div class="bio reveal">
+        <div class="bio-main">
         <div class="bio-text">
           <p class="bio-lead">2019年に株式会社ビズパへ入社、現執行役員。2020年から継続している広告巡礼で得た、OOH（屋外広告・交通広告など）の豊富な事例知識と、メディアプランニング・バイイングの実務経験を併せ持つ<strong class="hl">OOHの専門家</strong>。</p>
-          <p>広告情報サイト「アドクロ」の運営、OOHを中心とした広告代理業のほか、OOH活用に関する研修の講師、イベント登壇や記事執筆などを行う。</p>
+          <div class="ask-ai">
+          <div class="ask-ai-text">
+          <p class="ask-ai-h"><svg class="ask-ai-spark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><linearGradient id="askAiGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34B26A"/><stop offset=".55" stop-color="#2BA8C8"/><stop offset="1" stop-color="#7B61FF"/></linearGradient></defs><path fill="url(#askAiGrad)" d="M10 3.5c.5 4.6 2.6 7.7 7.2 8.6-4.6.9-6.7 4-7.2 8.6-.5-4.6-2.6-7.7-7.2-8.6 4.6-.9 6.7-4 7.2-8.6z"/><path fill="url(#askAiGrad)" d="M18.6 1.5c.2 1.8 1 3 2.9 3.4-1.9.4-2.7 1.6-2.9 3.4-.2-1.8-1-3-2.9-3.4 1.9-.4 2.7-1.6 2.9-3.4z"/><path fill="url(#askAiGrad)" d="M19.4 15.5c.15 1.3.75 2.2 2.1 2.45-1.35.25-1.95 1.15-2.1 2.45-.15-1.3-.75-2.2-2.1-2.45 1.35-.25 1.95-1.15 2.1-2.45z"/></svg>AIに「加藤誠也」について教えてもらう</p>
+          </div>
+          <div class="ask-ai-btns">
+          <a class="ask-ai-btn" href="https://chatgpt.com/?prompt=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="ChatGPTで開く（新しいタブ）">ChatGPT<svg class="ask-ai-ext" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="ask-ai-btn" href="https://www.perplexity.ai/search?q=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="Perplexityで開く（新しいタブ）">Perplexity<svg class="ask-ai-ext" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="ask-ai-btn" href="https://claude.ai/new?q=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="Claudeで開く（新しいタブ）">Claude<svg class="ask-ai-ext" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <p class="ask-ai-note">質問文が入った状態で外部のAIサービスが開きます。</p>
+          </div>
+        </div>
         </div>
         <div class="bio-cta-row">
-          <a class="bio-cta" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">ちょっと相談する<svg class="cta-ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="bio-cta" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">コンタクトを取る<svg class="cta-ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="bio-cta ghost" href="https://adbrex.theletter.jp/" target="_blank" rel="noopener"><svg class="cta-ic" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 6l6.5 5 6.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>毎朝の事例メールを受け取る</a>
         </div>
       </div>
@@ -564,11 +656,6 @@
         <span class="mt"><em>中央大学 国際経営学部</em>｜特別演習A 屋外広告（OOH）をテーマに講演＆ワークショップを開催</span>
         <span class="mgo">VIEW →</span>
       </a>
-      <a class="m-row" href="https://www.obirin.ac.jp/info/year_2025/lo4e4n000007r2tj.html" target="_blank" rel="noopener">
-        <span class="md"><span class="cat">大学</span></span>
-        <span class="mt"><em>桜美林大学</em>｜特別講義「屋外広告の最新トレンド」</span>
-        <span class="mgo">VIEW →</span>
-      </a>
       <div class="m-row static">
         <span class="md"><span class="cat">TV出演</span></span>
         <span class="mt"><em>TBS『日曜日の初耳学』</em>｜言葉ひとつで人の心を動かす【キャッチコピー】を深堀り！</span>
@@ -583,11 +670,6 @@
         <span class="mt"><em>MarkeZine</em>｜2026年上半期に話題になったOOH 傾向は“むず痒さ・没入感・推し活”</span>
         <span class="mgo">VIEW →</span>
       </a>
-      <a class="m-row" href="https://peatix.com/group/16309445" target="_blank" rel="noopener">
-        <span class="md"><span class="cat">主催</span></span>
-        <span class="mt">「街ナカ広告ナイト」の企画・運営</span>
-        <span class="mgo">VIEW →</span>
-      </a>
     </div>
 
     <div class="media-more">
@@ -596,56 +678,77 @@
   </div>
 </section>
 
-<!-- ============ CONSULT ============ -->
-<section class="consult" id="consult">
+<!-- ============ TRAINING ============ -->
+<section class="training" id="training">
   <div class="wrap">
-    <h2 class="reveal">こんなことができます</h2>
-    <div class="consult-grid reveal">
-      <div class="cc-card">
-        <div class="cc-head cc-1"><span class="cc-ic">🖥</span>広告主・代理店の方</div>
-        <div class="cc-body">
-          <h3>OOHの相談に乗ってほしい</h3>
-          <ul>
-            <li>OOHの企画提案・事例共有</li>
-            <li>予算内での戦略的なOOH活用</li>
-            <li>アドバイザーとして継続サポート</li>
-          </ul>
-        </div>
+    <div class="tr-hero reveal">
+      <div class="tr-hero-text">
+        <p class="tr-badge"><span>PICK UP！</span></p>
+        <h2 class="tr-title">OOH活用研修、受付中</h2>
+        <p class="tr-catch">OOHを使った企画を、社内で考えられるように</p>
+        <p class="tr-desc">広告巡礼で現場を見続けているからこそ話せる、OOH（屋外広告・交通広告）の最新トレンド、媒体選びのコツ、企画の考え方をお伝えし、社内のOOHリテラシーを底上げします。講師は加藤が担当します。</p>
+        <a class="bio-cta" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});if(typeof gtag==='function')gtag('event','training_inquiry_click',{position:'top'});return false;">研修について相談する<svg class="cta-ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <div class="cc-card">
-        <div class="cc-head cc-2"><span class="cc-ic">🎤</span>企業の研修担当・主催者の方</div>
-        <div class="cc-body">
-          <h3>講演や番組に出てほしい</h3>
-          <ul>
-            <li>登壇・出演（OOHトレンド等）</li>
-            <li>屋外広告テーマの講演、ワークショップ</li>
-            <li>OOH活用法など社員研修・レクチャー</li>
-          </ul>
-        </div>
+      <div class="tr-hero-img"><img src="https://seiya-kato.com/koenkai-opt.jpg" alt="講演で屋外広告のトレンドを話す加藤誠也" loading="lazy" /></div>
+    </div>
+
+    <p class="tr-label reveal">こんな方に</p>
+    <div class="tr-fit reveal">
+      <div class="tr-fit-card">
+        <p class="tr-fit-h">事業会社の方</p>
+        <ul class="tr-check">
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>社内に屋外広告に詳しい人がおらず、相談できる相手がいない</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>AIで情報を集めたものの、「なぜその媒体を選ぶのか」を社内で説明できない</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>手元の予算で、どの媒体にどれくらい出せるのか見当がつかない</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Web以外の広告を初めて考えていて、何が合うのか分からない</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>屋外広告・交通広告の最新トレンドを掴みたい</span></li>
+        </ul>
       </div>
-      <div class="cc-card">
-        <div class="cc-head cc-3"><span class="cc-ic">✏️</span>メディア・編集者の方</div>
-        <div class="cc-body">
-          <h3>OOHについて話してほしい</h3>
-          <ul>
-            <li>専門メディアでの連載・寄稿</li>
-            <li>OOH関連記事のコメント・監修</li>
-            <li>YouTube、ラジオ・ポッドキャスト出演</li>
-          </ul>
-        </div>
+      <div class="tr-fit-card">
+        <p class="tr-fit-h">広告・マーケティング支援会社の方</p>
+        <ul class="tr-check">
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>OOHの相談が来るたびに外注へ丸投げせず、社内で一次提案を作れるようにしたい</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>担当者によって、OOHの知識や経験に差がある</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>新人や異動してきたメンバーにOOHを教えたいが、教える時間がない</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SNSで話題化させる手段として、OOHを提案していきたい</span></li>
+            <li><svg class="tr-ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>今は特定の領域で受注しているが、OOHまで提案の幅を広げたい</span></li>
+        </ul>
       </div>
     </div>
-    <div class="ask-ai reveal">
-      <div class="ask-ai-text">
-        <p class="ask-ai-h"><svg class="ask-ai-spark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><linearGradient id="askAiGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34B26A"/><stop offset=".55" stop-color="#2BA8C8"/><stop offset="1" stop-color="#7B61FF"/></linearGradient></defs><path fill="url(#askAiGrad)" d="M10 3.5c.5 4.6 2.6 7.7 7.2 8.6-4.6.9-6.7 4-7.2 8.6-.5-4.6-2.6-7.7-7.2-8.6 4.6-.9 6.7-4 7.2-8.6z"/><path fill="url(#askAiGrad)" d="M18.6 1.5c.2 1.8 1 3 2.9 3.4-1.9.4-2.7 1.6-2.9 3.4-.2-1.8-1-3-2.9-3.4 1.9-.4 2.7-1.6 2.9-3.4z"/><path fill="url(#askAiGrad)" d="M19.4 15.5c.15 1.3.75 2.2 2.1 2.45-1.35.25-1.95 1.15-2.1 2.45-.15-1.3-.75-2.2-2.1-2.45 1.35-.25 1.95-1.15 2.1-2.45z"/></svg>AIに整理してもらう</p>
-        <p class="ask-ai-lead">ボタンを押すと、質問文が入った状態でAIが開きます。</p>
+
+    <p class="tr-label reveal">メニュー</p>
+    <div class="tr-menu reveal">
+      <div class="tr-plan">
+        <p class="tr-plan-tag">担当者向け</p>
+        <h3>1on1研修</h3>
+        <p class="tr-meta"><span>最大2名</span><span>2時間</span></p>
+        <p>最新トレンドから媒体の基本、発注までの流れや注意点を、共通資料で学びます。オプションで一緒に広告巡礼も。</p>
       </div>
-      <div class="ask-ai-btns">
-        <a class="ask-ai-btn" href="https://chatgpt.com/?prompt=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="ChatGPTで開く（新しいタブ）">ChatGPT<svg class="ask-ai-ext" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="ask-ai-btn" href="https://www.perplexity.ai/search?q=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="Perplexityで開く（新しいタブ）">Perplexity<svg class="ask-ai-ext" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="ask-ai-btn" href="https://claude.ai/new?q=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="Claudeで開く（新しいタブ）">Claude<svg class="ask-ai-ext" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="tr-plan">
+        <p class="tr-plan-tag">部署・チーム向け</p>
+        <h3>社内研修 スタンダード</h3>
+        <p class="tr-meta"><span>〜30名</span><span>2時間</span></p>
+        <p>共通資料で、最新トレンドから媒体の基本、発注までの流れや注意点を学びます。</p>
       </div>
-      <p class="ask-ai-note">外部のAIサービスが開きます。AIの回答には誤りが含まれることがあります。</p>
+      <div class="tr-plan">
+        <p class="tr-plan-tag">部署・チーム向け</p>
+        <h3>社内研修 オーダーメイド</h3>
+        <p class="tr-meta"><span>〜30名</span><span>2時間</span></p>
+        <p>事前ヒアリングをもとに、テーマや内容に合わせて設計します。新入社員研修にも対応。</p>
+      </div>
+    </div>
+
+    <p class="tr-label reveal">ご利用の流れ</p>
+    <ol class="tr-flow reveal">
+      <li><span class="tr-step">1</span><b>お問い合わせ</b><small>フォームからご連絡ください</small></li>
+      <li><span class="tr-step">2</span><b>ご案内・ヒアリング</b><small>詳細ご案内の上、ヒアリング</small></li>
+      <li><span class="tr-step">3</span><b>研修当日</b><small>2時間・対面推奨（オンライン可）</small></li>
+      <li><span class="tr-step">4</span><b>事後フォロー</b><small>研修後1週間、メールで質問を受け付けます</small></li>
+    </ol>
+
+    <div class="tr-cta reveal">
+      <p>全国どこでも伺います（交通費は別途ご相談）。内容や人数など、まずはお気軽にご相談ください。</p>
+      <a class="bio-cta" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});if(typeof gtag==='function')gtag('event','training_inquiry_click');return false;">研修について相談する<svg class="cta-ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
@@ -668,30 +771,11 @@
   </div>
 </section>
 
-<!-- ============ LUNCH ============ -->
-<section class="lunch" id="lunch">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <h2 class="sec-en">とりあえずランチ行きませんか？</h2>
-    </div>
-    <p class="media-note reveal" style="max-width:none">特に用事がなくても、共通点がなくても。なんとなく話してみたい、だけで十分です！</p>
-    <div class="lunch-card reveal">
-      <!-- Begin TimeRex Widget -->
-      <div id="timerex_calendar" data-url="https://timerex.net/s/kato.seiya_a288/f6985603"></div>
-      <script id="timerex_embed" src="https://asset.timerex.net/js/embed.js"></script>
-      <script type="text/javascript">
-        TimerexCalendar();
-      </script>
-      <!-- End TimeRex Widget -->
-    </div>
-  </div>
-</section>
-
 <!-- ============ FAQ ============ -->
 <section class="faq" id="faq">
   <div class="wrap">
     <div class="sec-head reveal">
-      <h2 class="sec-en">よくランチで質問いただくこと</h2>
+      <h2 class="sec-en">よく質問いただくこと</h2>
     </div>
     <div class="faq-list reveal">
       <details class="faq-item">
@@ -789,7 +873,7 @@
 <!-- ============ CONTACT (LP-style) ============ -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <p class="reveal hw">広告の話、ちょっとした質問、情報交換のお誘いなど。<br>まだまとまっていなくても、気軽に声をかけてください。</p>
+    <p class="reveal hw">問い合わせは以下フォーム、または<a href="https://x.com/adbrex_" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:4px">XのDM</a>からご連絡ください。</p>
     <div class="contact-form reveal">
       <div class="form-card">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfNdFN2o2JLEnagAHAhduffsJlPfBBT9jjNGNDhhwXkfXK8w/viewform?embedded=true" width="640" height="1187" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" title="お問い合わせフォーム">読み込んでいます…</iframe>
@@ -797,19 +881,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="site-foot">
-  <div class="wrap foot-in">
-    <a class="head-name" href="#top"><b>加藤 誠也</b><span class="head-sep" aria-hidden="true"></span><span class="head-tag">屋外広告ウォッチャー</span></a>
-    <nav class="head-links" aria-label="外部プロフィール">
-      <a href="https://x.com/adbrex_" target="_blank" rel="me noopener">X</a>
-      <a href="https://note.com/adbrex_" target="_blank" rel="me noopener">note</a>
-      <a href="https://markezine.jp/author/1365" target="_blank" rel="me noopener">MarkeZine</a>
-      <a href="https://adbrex.theletter.jp/" target="_blank" rel="me noopener">ニュースレター</a>
-    </nav>
-  </div>
-</footer>
 
 <!-- ============ FLOATING ROUND LUNCH BUTTON ============ -->
 <a class="ask-fab" href="https://timerex.net/s/kato.seiya_a288/f6985603/" target="_blank" rel="noopener" aria-label="ランチしませんか">
@@ -840,7 +911,6 @@
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.14});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
 
   // GA4: capture every link click (internal & outbound)
   document.addEventListener('click', function(e){
