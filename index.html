@@ -567,6 +567,57 @@
   @media(max-width:420px){
     .wrap{padding:0 18px}
   }
+
+/* ===== 自作お問い合わせフォーム ===== */
+.contact-form .form-card { text-align: left; }
+.cf, .cf-done { padding: 36px 36px 32px; }
+.cf-head { margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.cf-title { margin: 0 0 6px; font-size: 22px; font-weight: 900; color: var(--ink); letter-spacing: .02em; }
+.cf-desc { margin: 0 !important; font-size: 14.5px !important; line-height: 1.8; color: var(--ink-soft); max-width: none !important; }
+
+.cf-field { margin-bottom: 22px; }
+.cf-field label { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 15px; font-weight: 700; color: var(--ink); }
+.cf-req, .cf-opt { font-size: 11px; font-weight: 700; line-height: 1; padding: 4px 7px; border-radius: 999px; }
+.cf-req { background: var(--accent-soft); color: var(--accent-dark); }
+.cf-opt { background: var(--bg-soft); color: var(--muted); }
+
+.cf input, .cf textarea {
+  width: 100%; box-sizing: border-box; display: block;
+  font: inherit; font-size: 16px; line-height: 1.7; color: var(--ink);
+  background: #fff; border: 1px solid var(--line-2); border-radius: 12px;
+  padding: 12px 14px; transition: border-color .15s, box-shadow .15s;
+  -webkit-appearance: none; appearance: none;
+}
+.cf textarea { resize: vertical; min-height: 140px; }
+.cf input::placeholder, .cf textarea::placeholder { color: var(--muted); opacity: .8; }
+.cf input:focus, .cf textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+
+.cf-err { display: none; margin: 6px 0 0 !important; font-size: 13px !important; color: #D14343; max-width: none !important; }
+.cf-field.is-invalid input, .cf-field.is-invalid textarea { border-color: #D14343; }
+.cf-field.is-invalid .cf-err { display: block; }
+
+.cf-btn {
+  display: block; width: 100%; margin-top: 30px; padding: 16px 24px;
+  font: inherit; font-size: 16px; font-weight: 800; letter-spacing: .3px;
+  color: #fff; background: var(--accent); border: 0; border-radius: 999px;
+  cursor: pointer; transition: background .15s, transform .1s;
+}
+.cf-btn:hover { background: var(--accent-dark); }
+.cf-btn:active { transform: translateY(1px); }
+.cf-btn:disabled { opacity: .6; cursor: default; }
+.cf-fail { margin: 14px 0 0 !important; font-size: 13.5px !important; color: #D14343; text-align: center; max-width: none !important; }
+
+.cf-done { text-align: center; padding-top: 56px; padding-bottom: 56px; }
+.cf-done-icon {
+  width: 56px; height: 56px; margin: 0 auto 18px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 26px; font-weight: 900;
+  color: #fff; background: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .cf, .cf-done { padding: 26px 20px 24px; }
+  .cf-title { font-size: 19px; }
+}
 </style>
 </head>
 <body id="top">
@@ -876,7 +927,42 @@
     <p class="reveal hw">問い合わせは以下フォーム、または<a href="https://x.com/adbrex_" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:4px">XのDM</a>からご連絡ください。</p>
     <div class="contact-form reveal">
       <div class="form-card">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfNdFN2o2JLEnagAHAhduffsJlPfBBT9jjNGNDhhwXkfXK8w/viewform?embedded=true" width="640" height="1187" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" title="お問い合わせフォーム">読み込んでいます…</iframe>
+        <form class="cf" id="cf" novalidate
+              action="https://docs.google.com/forms/d/e/1FAIpQLScfNdFN2o2JLEnagAHAhduffsJlPfBBT9jjNGNDhhwXkfXK8w/formResponse"
+              method="POST">
+          <div class="cf-head">
+            <h3 class="cf-title">お問い合わせ</h3>
+            <p class="cf-desc">24時間以内（土日祝除く）には返信しますね。</p>
+          </div>
+      
+          <div class="cf-field">
+            <label for="cf-body">相談内容<span class="cf-req">必須</span></label>
+            <textarea id="cf-body" name="entry.493454283" rows="5" required
+              placeholder="「OOH活用研修を見た」「情報交換がしたい」など"></textarea>
+            <p class="cf-err">相談内容を入力してください</p>
+          </div>
+      
+          <div class="cf-field">
+            <label for="cf-name">お名前<span class="cf-opt">任意</span></label>
+            <input id="cf-name" name="entry.40679078" type="text" autocomplete="name">
+          </div>
+      
+          <div class="cf-field">
+            <label for="cf-mail">メールアドレス<span class="cf-req">必須</span></label>
+            <input id="cf-mail" name="entry.93493837" type="email" required
+              autocomplete="email" inputmode="email" placeholder="you@example.com">
+            <p class="cf-err">メールアドレスを正しく入力してください</p>
+          </div>
+      
+          <button type="submit" class="cf-btn">送信する</button>
+          <p class="cf-fail" hidden>送信できませんでした。時間をおいて再度お試しいただくか、XのDMからご連絡ください。</p>
+        </form>
+      
+        <div class="cf-done" id="cf-done" hidden>
+          <div class="cf-done-icon" aria-hidden="true">✓</div>
+          <h3 class="cf-title">送信しました</h3>
+          <p class="cf-desc">お問い合わせありがとうございます。<br>24時間以内（土日祝除く）に返信しますね。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -923,6 +1009,49 @@
       outbound: !!(a.host && a.host !== location.host)
     });
   }, true);
+</script>
+<script>
+(function () {
+  var form = document.getElementById('cf');
+  if (!form) return;
+  var done = document.getElementById('cf-done');
+  var btn  = form.querySelector('.cf-btn');
+  var fail = form.querySelector('.cf-fail');
+
+  function check(el) {
+    var ok = !el.required || (el.checkValidity() && el.value.trim() !== '');
+    el.closest('.cf-field').classList.toggle('is-invalid', !ok);
+    return ok;
+  }
+  form.querySelectorAll('[required]').forEach(function (el) {
+    el.addEventListener('blur',  function () { check(el); });
+    el.addEventListener('input', function () {
+      if (el.closest('.cf-field').classList.contains('is-invalid')) check(el);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var fields = Array.prototype.slice.call(form.querySelectorAll('[required]'));
+    var bad = fields.filter(function (el) { return !check(el); });
+    if (bad.length) { bad[0].focus(); return; }
+
+    btn.disabled = true; btn.textContent = '送信中…'; fail.hidden = true;
+
+    // Googleフォームへ送信（レスポンスは読めない no-cors 方式）
+    fetch(form.action, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new URLSearchParams(new FormData(form))
+    }).then(function () {
+      form.hidden = true; done.hidden = false;
+      done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (window.gtag) gtag('event', 'contact_submit');
+    }).catch(function () {
+      btn.disabled = false; btn.textContent = '送信する'; fail.hidden = false;
+    });
+  });
+})();
 </script>
 </body>
 </html>
