@@ -575,6 +575,9 @@
 .cf-title { margin: 0 0 6px; font-size: 22px; font-weight: 900; color: var(--ink); letter-spacing: .02em; }
 .cf-desc { margin: 0 !important; font-size: 14.5px !important; line-height: 1.8; color: var(--ink-soft); max-width: none !important; }
 
+.cf-desc a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 4px; }
+.cf-desc a:hover { color: var(--accent); }
+
 .cf-field { margin-bottom: 22px; }
 .cf-field label { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 15px; font-weight: 700; color: var(--ink); }
 .cf-req, .cf-opt { font-size: 11px; font-weight: 700; line-height: 1; padding: 4px 7px; border-radius: 999px; }
@@ -932,7 +935,7 @@
               method="POST">
           <div class="cf-head">
             <h3 class="cf-title">お問い合わせ</h3>
-            <p class="cf-desc">24時間以内（土日祝除く）には返信しますね。</p>
+            <p class="cf-desc">24時間以内（土日祝除く）には返信いたします。<br>メールでの問い合わせは<a href="mailto:kato.seiya@bizpa.co.jp">こちら</a></p>
           </div>
       
           <div class="cf-field">
@@ -961,7 +964,7 @@
         <div class="cf-done" id="cf-done" hidden>
           <div class="cf-done-icon" aria-hidden="true">✓</div>
           <h3 class="cf-title">送信しました</h3>
-          <p class="cf-desc">お問い合わせありがとうございます。<br>24時間以内（土日祝除く）に返信しますね。</p>
+          <p class="cf-desc">お問い合わせありがとうございます。<br>24時間以内（土日祝除く）に返信いたします。</p>
         </div>
       </div>
     </div>
