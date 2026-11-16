@@ -97,6 +97,17 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "name": "新入社員研修・内定者研修（OOH研修）",
+            "description": "広告代理店・メディア・事業会社の新入社員と内定者向けに、OOH（屋外広告・交通広告）の基本と、たくさんの事例から見える最近のトレンドを伝える2時間の研修。広告の仕事のおもしろさと企画力を高める。",
+            "url": "https://seiya-kato.com/newhire/",
+            "provider": { "@id": "https://seiya-kato.com/#kato" },
+            "areaServed": "JP"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
             "name": "屋外広告に関する講演・登壇・ワークショップ",
             "description": "自治体・大学・企業・イベント向けに、OOHの最新事例やトレンド、企画の考え方、新入社員向けのOOH出稿の基本などをテーマに講演・ワークショップを実施。",
             "provider": { "@id": "https://seiya-kato.com/#kato" },
@@ -739,7 +750,9 @@
   <style>
     .services{padding:80px 0;background:#FFFFFF}
     .services .sv-wrap{max-width:1120px;margin:0 auto;padding:0 24px;box-sizing:border-box}
-    .services .sv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .services .sv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    @media (max-width:1000px){.services .sv-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.services .sv-grid{grid-template-columns:1fr}}
     .services .sv-card{display:flex;flex-direction:column;background:#FFFFFF;border:1px solid #E8E9E1;border-radius:16px;overflow:hidden;color:#1F2420;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
     .services .sv-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(31,36,32,.08)}
     .services .sv-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
@@ -757,7 +770,16 @@
         <div class="sv-body">
           <p class="sv-for">企業向け</p>
           <p class="sv-name">OOHトレンド勉強会</p>
-          <p class="sv-desc">いま話題のOOHから、企画のヒントを持ち帰る勉強会。新入社員研修にもおすすめです。</p>
+          <p class="sv-desc">いま話題のOOHから、企画のヒントを持ち帰る勉強会。担当者・チーム向けです。</p>
+          <p class="sv-more">詳しく見る →</p>
+        </div>
+      </a>
+      <a class="sv-card" href="/newhire/">
+        <img src="/newhire/obirin.jpg" alt="屋外広告の楽しみ方を講義する加藤誠也" width="600" height="450" loading="lazy">
+        <div class="sv-body">
+          <p class="sv-for">新入社員・内定者向け</p>
+          <p class="sv-name">新入社員研修</p>
+          <p class="sv-desc">OOHの基本とトレンドを事例で。広告の仕事のおもしろさが伝わる研修です。</p>
           <p class="sv-more">詳しく見る →</p>
         </div>
       </a>
