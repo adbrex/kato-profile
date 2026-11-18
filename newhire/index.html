@@ -1,24 +1,40 @@
 <!doctype html>
 <html lang="ja">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TSDBKQXR7G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TSDBKQXR7G');
+  // リンクのクリックを記録（ページ内・外部とも）
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a');
+    if(!a) return;
+    var txt = (a.textContent || a.getAttribute('aria-label') || '').replace(/\s+/g,' ').trim().slice(0,80);
+    gtag('event','link_click',{ link_text: txt, link_url: a.href, outbound: !!(a.host && a.host !== location.host) });
+  }, true);
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>新入社員研修・内定者研修｜広告代理店・広告業界向けOOH研修｜加藤誠也</title>
-<meta name="description" content="広告代理店・メディア・事業会社の新入社員研修・内定者研修に。OOH（屋外広告・交通広告）の基本と最新トレンドを、たくさんの事例でお伝えします。広告業界の仕事のおもしろさに出会い、これからの提案に向けた企画力とやる気を高めます。">
+<meta name="description" content="広告代理店・メディア・事業会社の新入社員研修・内定者研修に。2020年から続ける現地調査「広告巡礼」の実例をもとに、街の広告の見方と屋外広告・交通広告（OOH）の最新トレンドをお伝えします。企画力と仕事への意欲を高める研修です。">
 <meta name="robots" content="index,follow">
 <meta name="author" content="加藤誠也">
 <link rel="canonical" href="https://seiya-kato.com/newhire/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="加藤誠也｜屋外広告ウォッチャー">
 <meta property="og:title" content="新入社員研修・内定者研修｜街の広告から、広告の仕事のおもしろさを知る">
-<meta property="og:description" content="OOHの基本と最新トレンドを、現地で見てきた事例でお伝えします。外部講師ならではの客観的な視点で、新入社員の企画力とやる気を高める研修です。">
+<meta property="og:description" content="広告巡礼で集めた実例をもとに、街の広告の見方と最新のトレンドを伝える新入社員・内定者研修。社会人生活を通じて役立つ視点と、企画のアイデアを持ち帰れます。">
 <meta property="og:url" content="https://seiya-kato.com/newhire/">
 <meta property="og:image" content="https://seiya-kato.com/ogp-2.png">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@adbrex_">
 <meta name="twitter:title" content="新入社員研修・内定者研修｜街の広告から、広告の仕事のおもしろさを知る">
-<meta name="twitter:description" content="OOHの基本と最新トレンドを、現地で見てきた事例でお伝えします。外部講師ならではの客観的な視点で、新入社員の企画力とやる気を高める研修です。">
+<meta name="twitter:description" content="広告巡礼で集めた実例をもとに、街の広告の見方と最新のトレンドを伝える新入社員・内定者研修。社会人生活を通じて役立つ視点と、企画のアイデアを持ち帰れます。">
 <meta name="twitter:image" content="https://seiya-kato.com/ogp-2.png">
 <script type="application/ld+json">
 {
@@ -31,10 +47,21 @@
       "name": "新入社員研修・内定者研修｜広告代理店・広告業界向けOOH研修｜加藤誠也",
       "inLanguage": "ja",
       "dateModified": "2026-11-18",
-      "isPartOf": {"@type": "WebSite", "@id": "https://seiya-kato.com/#website", "url": "https://seiya-kato.com/", "name": "加藤誠也｜屋外広告ウォッチャー"},
-      "about": {"@id": "https://seiya-kato.com/#kato"},
-      "mainEntity": {"@id": "https://seiya-kato.com/newhire/#service"},
-      "breadcrumb": {"@id": "https://seiya-kato.com/newhire/#breadcrumb"},
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://seiya-kato.com/#website",
+        "url": "https://seiya-kato.com/",
+        "name": "加藤誠也｜屋外広告ウォッチャー"
+      },
+      "about": {
+        "@id": "https://seiya-kato.com/#kato"
+      },
+      "mainEntity": {
+        "@id": "https://seiya-kato.com/newhire/#service"
+      },
+      "breadcrumb": {
+        "@id": "https://seiya-kato.com/newhire/#breadcrumb"
+      },
       "primaryImageOfPage": "https://seiya-kato.com/newhire/chuo.jpg"
     },
     {
@@ -45,40 +72,116 @@
       "url": "https://seiya-kato.com/",
       "image": "https://seiya-kato.com/newhire/kato-profile.jpg",
       "jobTitle": "執行役員",
-      "worksFor": {"@type": "Organization", "name": "株式会社ビズパ"},
+      "worksFor": {
+        "@type": "Organization",
+        "name": "株式会社ビズパ"
+      },
       "description": "「広告巡礼」が日課の屋外広告ウォッチャー。株式会社ビズパ執行役員。2020年から続ける現地調査で得たOOH（屋外広告・交通広告）の事例知識と、メディアプランニング・バイイングの実務経験を併せ持つOOHの専門家。",
-      "knowsAbout": ["屋外広告", "交通広告", "OOH", "媒体選定", "メディアプランニング", "デジタルサイネージ", "新入社員研修", "内定者研修"],
-      "sameAs": ["https://x.com/adbrex_", "https://note.com/adbrex_", "https://markezine.jp/author/1365"]
+      "knowsAbout": [
+        "屋外広告",
+        "交通広告",
+        "OOH",
+        "媒体選定",
+        "メディアプランニング",
+        "デジタルサイネージ",
+        "新入社員研修",
+        "内定者研修"
+      ],
+      "sameAs": [
+        "https://x.com/adbrex_",
+        "https://note.com/adbrex_",
+        "https://markezine.jp/author/1365"
+      ]
     },
     {
       "@type": "Service",
       "@id": "https://seiya-kato.com/newhire/#service",
-      "name": "新入社員・内定者向けOOH研修",
+      "name": "新入社員・内定者のための屋外広告トレンド研修",
       "serviceType": "新入社員研修・内定者研修",
-      "description": "広告代理店・メディア・事業会社の新入社員研修・内定者研修として、OOH（屋外広告・交通広告）の基本と、たくさんの事例から見える最近の傾向・トレンドをお伝えする研修です。世の中のトレンドを俯瞰して見ることで、これからの提案に向けた企画力とやる気を高めます。",
-      "audience": {"@type": "Audience", "audienceType": "新入社員・内定者"},
-      "provider": {"@id": "https://seiya-kato.com/#kato"},
-      "areaServed": {"@type": "Country", "name": "日本"},
+      "description": "広告代理店・メディア・事業会社の新入社員研修・内定者研修として、現地調査「広告巡礼」で集めた実例をもとに、街の広告の見方と屋外広告・交通広告（OOH）の最新トレンドをお伝えする2時間の研修です。企画力と仕事への意欲を高め、少人数で街を歩く「広告巡礼研修」にも対応します。",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "新入社員・内定者"
+      },
+      "provider": {
+        "@id": "https://seiya-kato.com/#kato"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "日本"
+      },
       "url": "https://seiya-kato.com/newhire/"
     },
     {
       "@type": "FAQPage",
       "@id": "https://seiya-kato.com/newhire/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "料金はどのくらいですか。", "acceptedAnswer": {"@type": "Answer", "text": "人数と実施形式に応じてご案内します。お気軽にお問い合わせください。"}},
-        {"@type": "Question", "name": "入社前の内定者研修としても依頼できますか。", "acceptedAnswer": {"@type": "Answer", "text": "はい。内定者向けには、広告の仕事のおもしろさが伝わる内容を中心に組み立てます。"}},
-        {"@type": "Question", "name": "広告代理店以外の会社でも受けられますか。", "acceptedAnswer": {"@type": "Answer", "text": "はい。事業会社の宣伝・マーケティング部門に配属される方にもおすすめです。事前ヒアリングで内容を調整します。"}},
-        {"@type": "Question", "name": "人数が多い場合も対応できますか。", "acceptedAnswer": {"@type": "Answer", "text": "30名までを目安にしています。それ以上の場合はご相談ください。"}},
-        {"@type": "Question", "name": "オンラインでも受けられますか。", "acceptedAnswer": {"@type": "Answer", "text": "対応しています。質疑が活発になるので、対面をおすすめしています。"}},
-        {"@type": "Question", "name": "交通費はかかりますか。", "acceptedAnswer": {"@type": "Answer", "text": "東京23区内は無料です。23区外は別途ご相談ください。全国どこでも伺います。"}}
+        {
+          "@type": "Question",
+          "name": "料金はどのくらいですか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "人数と実施形式に応じてご案内します。お気軽にお問い合わせください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "入社前の内定者研修としても依頼できますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。内定者向けには、広告の仕事のおもしろさが伝わる内容を中心に組み立てます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "広告代理店以外の会社でも受けられますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。事業会社の宣伝・マーケティング部門に配属される方にもおすすめです。事前ヒアリングで内容を調整します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "人数が多い場合も対応できますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "30名までを目安にしています。それ以上の場合はご相談ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "オンラインでも受けられますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "対応しています。質疑が活発になるので、対面をおすすめしています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "交通費はかかりますか。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "東京23区内は無料です。23区外は別途ご相談ください。全国どこでも伺います。"
+          }
+        }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://seiya-kato.com/newhire/#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "加藤誠也", "item": "https://seiya-kato.com/"},
-        {"@type": "ListItem", "position": 2, "name": "新入社員研修・内定者研修", "item": "https://seiya-kato.com/newhire/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "加藤誠也",
+          "item": "https://seiya-kato.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "新入社員研修・内定者研修",
+          "item": "https://seiya-kato.com/newhire/"
+        }
       ]
     }
   ]
@@ -292,6 +395,11 @@ summary::-webkit-details-marker{display:none}
 <p style="margin: 0; font-size: 17px; color: #1F2420"><span class="nb">日程や人数が決まっていない段階でも大丈夫です。</span><span class="nb">研修の目的から一緒に考えます。</span></p>
 <p style="margin: 20px 0 0; font-size: 15px; color: #1F2420">24時間以内（土日祝除く）に返信いたします。</p>
 <p style="margin: 6px 0 0; font-size: 15px; color: #1F2420">メールでのお問い合わせは<a href="mailto:kato.seiya@bizpa.co.jp" style="color: #1F2420; font-weight: 700; text-decoration: underline; text-underline-offset: 4px">こちら</a></p>
+<div style="margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(31,36,32,.2)">
+<p style="display: flex; align-items: center; gap: 7px; margin: 0; font-size: 15px; line-height: 1.6; font-weight: 800; color: #1F2420"><svg style="flex: none; width: 17px; height: 17px" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#FFFFFF" d="M10 3.5c.5 4.6 2.6 7.7 7.2 8.6-4.6.9-6.7 4-7.2 8.6-.5-4.6-2.6-7.7-7.2-8.6 4.6-.9 6.7-4 7.2-8.6z"/><path fill="#FFFFFF" d="M18.6 1.5c.2 1.8 1 3 2.9 3.4-1.9.4-2.7 1.6-2.9 3.4-.2-1.8-1-3-2.9-3.4 1.9-.4 2.7-1.6 2.9-3.4z"/><path fill="#FFFFFF" d="M19.4 15.5c.15 1.3.75 2.2 2.1 2.45-1.35.25-1.95 1.15-2.1 2.45-.15-1.3-.75-2.2-2.1-2.45 1.35-.25 1.95-1.15 2.1-2.45z"/></svg>問い合わせ前に、AIにも「加藤誠也」について聞いておく</p>
+<p style="margin: 4px 0 0; font-size: 14px; line-height: 1.7; color: #1F2420">加藤誠也の経歴や活動について、AIが公開情報をもとに整理します。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px"><a href="https://chatgpt.com/?prompt=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="ChatGPTで開く（新しいタブ）" style="display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px; border-radius: 999px; background: #FFFFFF; color: #1F2420; font-size: 13px; font-weight: 700; line-height: 1.4; text-decoration: none">ChatGPT<svg viewBox="0 0 12 12" aria-hidden="true" style="width: 11px; height: 11px; flex: none; color: #8E9386"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.perplexity.ai/search?q=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="Perplexityで開く（新しいタブ）" style="display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px; border-radius: 999px; background: #FFFFFF; color: #1F2420; font-size: 13px; font-weight: 700; line-height: 1.4; text-decoration: none">Perplexity<svg viewBox="0 0 12 12" aria-hidden="true" style="width: 11px; height: 11px; flex: none; color: #8E9386"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://claude.ai/new?q=%E6%AC%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7%E3%80%81%E5%8A%A0%E8%97%A4%E8%AA%A0%E4%B9%9F%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E5%88%86%E9%87%8E%E3%81%AE%E5%B0%82%E9%96%80%E5%AE%B6%E3%81%8B%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E4%BE%9D%E9%A0%BC%EF%BC%88OOH%E3%81%AE%E4%BC%81%E7%94%BB%E3%83%BB%E5%87%BA%E7%A8%BF%E6%94%AF%E6%8F%B4%E3%80%81%E8%AC%9B%E6%BC%94%E3%80%81%E5%8F%96%E6%9D%90%EF%BC%89%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%8B%E3%82%92%E6%95%B4%E7%90%86%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E6%9B%B8%E3%81%8B%E3%82%8C%E3%81%9F%E4%BA%8B%E5%AE%9F%E3%81%A8%E3%80%81%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E6%8E%A8%E6%B8%AC%E3%81%AF%E5%88%86%E3%81%91%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0AURL%3A%20https%3A%2F%2Fseiya-kato.com%2F" target="_blank" rel="noopener" aria-label="Claudeで開く（新しいタブ）" style="display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px; border-radius: 999px; background: #FFFFFF; color: #1F2420; font-size: 13px; font-weight: 700; line-height: 1.4; text-decoration: none">Claude<svg viewBox="0 0 12 12" aria-hidden="true" style="width: 11px; height: 11px; flex: none; color: #8E9386"><path d="M4 2.5h5.5V8M9.5 2.5 2.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</div>
 </div>
 <div class="cf-card" style="flex: 1 1 440px; min-width: 0">
 <form class="cf" id="cf" novalidate action="https://docs.google.com/forms/d/e/1FAIpQLScfNdFN2o2JLEnagAHAhduffsJlPfBBT9jjNGNDhhwXkfXK8w/formResponse" method="POST" data-src="新入社員研修ページ">
